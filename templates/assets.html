@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% block 'assets' %}
+<p><button type="button" class="btn btn-success" data-toggle="modal" data-target="#dialog" data-title="新建资产"
+           data-url="/assets/create/" data-btn-txt="添加">添加资产</button></p>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover info">
+        <thead align="center">
+            <tr>
+                <td>SN</td>
+                <td>IP(主机名)</td>
+                <td>操作系统</td>
+                <td>CPU/内存/硬盘</td>
+                <td>机房</td>
+                <td>使用者(业务)</td>
+                <td>采购时间(保修)</td>
+                <td>型号(供应商)</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>11</td>
+                <td>10.1.2.0</td>
+                <td>linux</td>
+                <td>1/2G/10G</td>
+                <td>beijing</td>
+                <td>xiangqian</td>
+                <td>2017年9月19日</td>
+                <td>dell</td>
+                <td width="200px">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#dialog" data-title="新建资产"
+                            data-url="/assets/modify/?id=" data-btn-txt="添加">添加资产</button>
+                    <button type="button" class="btn btn-danger del-assets" data-text="10.1.2.0" data-id="11">删除资产</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
