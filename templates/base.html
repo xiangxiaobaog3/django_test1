@@ -17,13 +17,13 @@
             <a class="navbar-brand" href="/">DevOPS</a>
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<span class="caret"></span> </a>
+						<a href="#" id='t1' class="dropdown-toggle" data-toggle="dropdown">Admin<span class="caret"></span> </a>
 						<ul class="dropdown-menu">
 							<li><a href="#"><i class="fa fa-user fa-fw"></i>个人中心</a></li>
 							<li class="divider"></li>
-							<li><a href="#"><i class="fa fa-mail-forward fa-fw"></i>退出登录</a></li>
+							<li><a href="/logout/"><i class="fa fa-mail-forward fa-fw"></i>退出登录</a></li>
 						</ul>
-                        <li><a href="/login/"><i class="fa fa-mail-forward fa-fw"></i>退出登录</a></li>
+                        <li><a href="/logout/"><i class="fa fa-mail-forward fa-fw"></i>退出登录</a></li>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -54,6 +54,17 @@
     <div id="page-wrapper">
 
     </div>
+    <script type="text/javascript">
+{#        var id1 = document.getElementById('t1');#}
+{#        console.log(id1.innerText);#}
+{#        id1.innerText = 'xiangxiaobao';#}
+        var tag = document.createElement("a");
+        tag.href = "http://blog.xiangxiaobao.com";
+        tag.innerText = '点我啊';
+
+        var id1 = document.getElementById('t1');
+        id1.appendChild(tag);
+    </script>
 
 	<script src="/static/js/jquery-2.1.1.js"></script>
 	<script src="/static/js/bootstrap.min.js"></script>
