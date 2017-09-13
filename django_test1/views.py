@@ -9,7 +9,6 @@ def login(request):
     if request.method == "POST":
         username = request.POST.get('email')
         password = request.POST.get('password')
-        # if username == 'xiangxiaobaog3@gmail.com' and password == 'bao982':
         user = auth.authenticate(username=username, password=password)
         if user:
             request.session['username'] = username
@@ -33,4 +32,8 @@ def assets(request):
         return render_to_response("assets.html", {'username': user_dict})
     else:
         return redirect('/login/')
+
+
+def user_manage(request):
+    return render_to_response("user_manage.html")
 

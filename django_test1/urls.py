@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^logout/', logout),
 	url(r'^base/', base),
     url(r'^assets/', assets),
+    url(r'^user_manage/', user_manage),
 ]
