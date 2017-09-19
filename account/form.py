@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
+
 from django import forms
 
 
-class ALogin(forms.Form):
+class LoginForm(forms.Form):
     username = forms.CharField()
-    email = forms.EmailField(required=True)
-    ip = forms.GenericIPAddressField()
+    password = forms.CharField(widget=forms.PasswordInput)
