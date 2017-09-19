@@ -21,6 +21,7 @@ from django_test1.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', login),
+    url(r'^login_form/', login_form),
     url(r'^logout/', logout),
 	url(r'^base/', base),
     url(r'^assets/', assets),
