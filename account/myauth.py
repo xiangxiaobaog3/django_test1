@@ -63,13 +63,13 @@ class UserProfile(AbstractBaseUser,PermissionsMixin):
     #business_unit = models.ManyToManyField(BusinessUnit)
     tel = models.CharField(u'座机', max_length=32,default=None,blank=True,null=True)
     mobile = models.CharField(u'手机', max_length=32,default=None,blank=True,null=True)
-
+    ip = models.GenericIPAddressField(protocol="ipv4", null=True, blank=True)
+    img = models.ImageField(null=True, blank=True, upload_to="upload")
     memo = models.TextField(u'备注', blank=True,null=True,default=None)
     date_joined = models.DateTimeField(blank=True, auto_now_add=True)
-    #valid_begin = models.DateTimeField(blank=True, auto_now=True)
+    valid_begin = models.DateTimeField(blank=True, auto_now=True)
     valid_begin_time = models.DateTimeField(default=django.utils.timezone.now)
     valid_end_time = models.DateTimeField(blank=True,null=True)
-
     groups = models.ManyToManyField
 
 
